@@ -9,13 +9,19 @@ import Card from '../Card.astro';
             <Card
             icon="ri-stack-line"
             title="Lay the Foundation" 
-            description="Start by creating your 101 Experiments page. This is where you’ll document and showcase all your experiments." 
+            description="Create your 101 Experiments page. This is where you’ll document and showcase all your experiments." 
             />
+
+            <i class="ri-arrow-right-s-line"></i>
+
             <Card 
             icon="ri-lightbulb-flash-line"
             title="Generate the Idea" 
             description="Use the idea generator to get randomized, fun challenges tailored to your interests." 
             />
+
+            <i class="ri-arrow-right-s-line"></i>
+
             <Card 
             icon="ri-share-box-line"
             title="Create and Share" 
@@ -34,10 +40,16 @@ import Card from '../Card.astro';
 	justify-content: center;
     gap: 32px;
 
-	height: 100vh;
+	height: 80vh;
 }
 .cards{
 	display: flex;
 	gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+i{
+    font-size: 2rem;
+    font-weight: 900;
 }
 </style>
