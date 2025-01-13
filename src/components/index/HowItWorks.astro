@@ -1,0 +1,43 @@
+---
+import Card from '../Card.astro';
+
+---
+
+<section class="how-it-works">
+    <h2>How It Works</h2>
+        <div class="cards">
+            <Card
+            icon="ri-stack-line"
+            title="Lay the Foundation" 
+            description="Start by creating your 101 Experiments page. This is where you’ll document and showcase all your experiments." 
+            />
+            <Card 
+            icon="ri-lightbulb-flash-line"
+            title="Generate the Idea" 
+            description="Use the idea generator to get randomized, fun challenges tailored to your interests." 
+            />
+            <Card 
+            icon="ri-share-box-line"
+            title="Create and Share" 
+            description="Build, design, or program your experiment, then share it with the community and document on your page!" 
+            />
+        </div>
+
+        <a class="btn-primary" href="#">LEARN MORE</a>
+</section>
+
+<style>
+    .how-it-works{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    gap: 32px;
+
+	height: 100vh;
+}
+.cards{
+	display: flex;
+	gap: 32px;
+}
+</style>

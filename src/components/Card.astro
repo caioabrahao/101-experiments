@@ -1,0 +1,30 @@
+---
+const { title = 'Default Title', description = 'Default Description', icon = 'ri-remixicon-line' } = Astro.props;
+---
+
+<div class="card">
+    <i class=`${icon}`></i>
+    <h4>{title}</h4>
+    <p>{description}</p>
+</div>
+
+<style>
+i{
+    font-size: 3rem;
+}
+.card{
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.card h4{
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+</style>
