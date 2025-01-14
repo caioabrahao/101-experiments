@@ -26,6 +26,8 @@ h2{
     cursor: pointer;
     transition: background-color 0.2s;
     text-decoration: none;
+    border: none;
+    width: fit-content;
 }
 .btn-primary:hover{
     background-color: #286cb9;
