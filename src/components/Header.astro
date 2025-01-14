@@ -3,10 +3,10 @@
     <div class="links">
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Participate</a></li>
-                <li><a href="#">Learning</a></li>
-                <li><a href="#">Generator</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/introduction-guide">Participar</a></li>
+                <li><a href="#">Aprender</a></li>
+                <li><a href="#">Ideias</a></li>
             </ul>
         </nav>
         <div class="socials">
@@ -62,5 +62,22 @@
     .socials a:hover{
         color: #000;
     }
+
+    .nav a.active {
+        font-weight: bold;
+    }
     
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('.nav ul li a');
+        const menuLength = menuItem.length;
+        for (let i = 0; i < menuLength; i++) {
+            if ((menuItem[i] as HTMLAnchorElement).href === currentLocation) {
+                menuItem[i].className = "active";
+            }
+        }
+    });
+</script>

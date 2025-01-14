@@ -1,0 +1,19 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+---
+
+<BaseLayout>
+<main>
+    <section class="markdownContent">
+        <slot/>
+    </section>
+    
+</main>
+</BaseLayout>
+
+<style>
+.markdownContent{
+    padding: 10%;
+    min-height: 90vh;
+}
+</style>
