@@ -1,7 +1,7 @@
 <script setup>
 const debugMode = false;
 
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { geminiPrompt } from '../main';
 import { marked } from 'marked';
 
@@ -9,7 +9,7 @@ marked.setOptions({
   breaks: true,
 });
 
-const response = ref('')
+const response = ref('You idea comes here!')
 
 const interestArea = ref('');
 const skillLevel = ref('');
@@ -30,6 +30,10 @@ function handleClick(promptInput) {
 
 }
 
+onMounted(() => {
+    
+});
+
 </script>
 
 <template>
@@ -44,7 +48,7 @@ function handleClick(promptInput) {
                     <label for="interest1">Web Development</label>
                 </div>
                 <div>
-                    <input type="radio" id="interest2" value="Graphic Design" v-Afternoon Passtimemodel="interestArea">
+                    <input type="radio" id="interest2" value="Graphic Design" v-model="interestArea">
                     <label for="interest2">Graphic Design</label>
                 </div>
                 <div>
