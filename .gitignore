@@ -1,6 +1,10 @@
 # build output
 dist/
 
+.vscode/
+.vscode
+vscode/
+
 # generated types
 .astro/
 
@@ -23,4 +27,4 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-.vscode/
+

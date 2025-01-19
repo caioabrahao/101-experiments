@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+---
+
+<BaseLayout>
+    <main>
+        <section class="section">
+            <h1>Participe do 101EXP!</h1>
+            <p class="secondary-text">Comece a criar ou expandir seu portfólio com a iniciativa 101 Experiments!</p>
+        
+            <div class="steps">
+                <div class="step1 step-card">
+                    <h3>1. Escolha um experimento</h3>
+                    <p>Escolha um experimento de nossa lista e comece a trabalhar nele. Você pode escolher um experimento que já foi feito ou criar um novo.</p>
+                </div>
+                <div class="step2 step-card">
+                    <h3>2. Crie seu projeto</h3>
+                    <p>Crie um projeto no GitHub e comece a trabalhar nele. Você pode usar o template de projeto que fornecemos ou criar o seu próprio.</p>
+                </div>
+                <div class="step3 step-card">
+                    <h3>3. Submeta seu projeto</h3>
+                    <p>Submeta seu projeto para nossa lista de experimentos. Se ele for aprovado, você poderá adicionar o experimento ao seu portfólio.</p>
+                </div>
+            </div>
+            
+        
+        </section>
+    </main>
+</BaseLayout>
+
+<style>
+    h1{
+        font-size: 3rem;
+    }
+    .section{
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
+
+    .steps{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+    }	
+
+    .step-card{
+        background-color: #f5f5f5;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 80%;
+    }
+</style>

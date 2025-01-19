@@ -1,6 +1,6 @@
 ---
-layout: ../layouts/MarkdownLayout.astro
-title: "Guia de Introdução"
+layout: ../../layouts/MarkdownLayout.astro
+title: "Oque é o 101 Experiments?"
 ---
 
 # Bem-vindo ao 101 Experiments!
