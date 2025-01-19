@@ -6,24 +6,52 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout>
     <main>
         <section class="section">
-            <h1>Participe do 101EXP!</h1>
-            <p class="secondary-text">Comece a criar ou expandir seu portfólio com a iniciativa 101 Experiments!</p>
-        
-            <div class="steps">
-                <div class="step1 step-card">
-                    <h3>1. Escolha um experimento</h3>
-                    <p>Escolha um experimento de nossa lista e comece a trabalhar nele. Você pode escolher um experimento que já foi feito ou criar um novo.</p>
-                </div>
-                <div class="step2 step-card">
-                    <h3>2. Crie seu projeto</h3>
-                    <p>Crie um projeto no GitHub e comece a trabalhar nele. Você pode usar o template de projeto que fornecemos ou criar o seu próprio.</p>
-                </div>
-                <div class="step3 step-card">
-                    <h3>3. Submeta seu projeto</h3>
-                    <p>Submeta seu projeto para nossa lista de experimentos. Se ele for aprovado, você poderá adicionar o experimento ao seu portfólio.</p>
-                </div>
+            <div class="title-text">
+                <h1>Participe do 101EXP!</h1>
+                <p class="secondary-text">Comece a criar ou expandir seu portfólio com a iniciativa 101 Experiments!</p>    
             </div>
             
+            <div class="steps">
+                <div class="step1 step-card">
+                    <i class="ri-pages-fill"></i>
+                    <div class="text">
+                        <h3>1. Crie sua página 101EXP</h3>
+                        <p>Comece criando sua própria página de 101 Experimentos! <br> É lá onde você irá mostrar suas criações e servir como seu portfólio de projetos!</p>    
+                    </div>
+                    </div>
+                <div class="step2 step-card">
+                    <i class="ri-apps-2-add-fill"></i>
+                    <div class="text">
+                        <h3>2. Gere um novo Experimento!</h3>
+                        <p>Após criar sua página, é hora de começar a preencher seu site! Entre no nosso gerador de Ideias e siga as instruções para gerar seu pitch de projeto.</p>
+                    </div>
+                </div>
+                <div class="step3 step-card">
+                    <i class="ri-file-list-3-fill"></i>
+                    <div class="text">
+                        <h3>3. Crie seu experimento</h3>
+                        <p>Prepare sua Bancada, software ou IDE de preferência e comece a criar! Trabalhe no seu experimento e se divirta com o processo!</p>
+                    </div>
+                </div>
+                <div class="step4 step-card">
+                    <i class="ri-server-fill"></i>
+                    <div class="text">
+                        <h3>4. Hospede seu experimento</h3>
+                        <p>Se aplicável, hospede seu projeto no Github (ou outro serviço se preferir). Crie um README para outros poderem saber mais sobre oque você criou.</p>
+                    </div>
+                </div>
+                <div class="step4 step-card">
+                    <i class="ri-send-plane-fill"></i>
+                    <div class="text">
+                        <h3>5. Envie seu projeto!</h3>
+                        <p>Submeta seu experimento na página de Projetos Enviados! Seu projeto vai ser exibido no feed com projetos de outros participantes, para todos poderem ver!</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="secondary-text">Para mais informações, acesso o blog para aprender mais sobre o projeto e outras coisa úteis!</p>
+        
+            <a href="/learn" class="btn-primary">💭 Acesse o Blog aqui!</a>
         
         </section>
     </main>
@@ -39,6 +67,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         flex-direction: column;
         align-items: center;
         padding: 10% 0;
+
+        gap: 32px;
+    }
+
+    .title-text{
+        text-align: center;
     }
 
     .steps{
@@ -49,9 +83,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }	
 
     .step-card{
+        display: flex;
+        align-items: center;
+
         background-color: #f5f5f5;
         padding: 2rem;
         border-radius: 10px;
         width: 80%;
+
+        i{
+            font-size: 3rem;
+            margin-right: 2rem;
+            opacity: .5;
+        }
     }
 </style>

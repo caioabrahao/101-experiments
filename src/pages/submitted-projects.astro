@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+---
+
+<BaseLayout>
+<main>
+    <section class="section">
+        <h1>EM BREVE...</h1>
+    </section>
+</main>
+</BaseLayout>
+
+<style>
+    .section{
+        min-height: 90vh;
+        padding: 10% 0;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 32px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 5rem;
+        opacity: .5;
+    }
+</style>

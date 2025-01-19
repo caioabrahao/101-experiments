@@ -1,23 +1,249 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-import Hero from '../components/index/Hero.astro';
-import About from '../components/index/About.astro';
-import HowItWorks from '../components/index/HowItWorks.astro';
-import GetStarted from '../components/index/GetStarted.astro';
+import Card from '../components/Card.astro';
 
 ---
 
 <BaseLayout>
 	<main>
-		<Hero />
-		<About />
-        <HowItWorks />
-		<GetStarted />
-        
+		<section class="hero">
+			<div class="titles">
+				<h1>101 EXPERIMENTS</h1>
+				<div class="texts">
+					<p>Construa um portfólio</p>
+					<p>Aprenda uma nova habilidade</p>
+					<p>Compartilhe com a comunidade</p>
+				</div>
+			</div>
+			
+			<div class="ctaButtons">
+				<a class="btn-primary" href="/learn/what-is-101exp">Me contah mais.. 💅</a>
+				<a href="https://discord.gg/C9z6A9Dt9B" class="btn-minimal">💻 Entre no Discord</a>
+			</div>
+			
+		</section>
+
+		<section class="about">
+			<h2>O que é o 101 EXP?</h2>
+			<p class="text">101 Experiments é um desafio para criar e apresentar 101 projetos únicos em áreas pelas quais você é apaixonado. O objetivo é aprender, se divertir e expandir seus limites.</p>
+			
+			<p class="quote">Se você quer criar algo legal e não sabe bem oque, você está no lugar certo!</p>
+		
+			<a class="btn-primary" href="/participate">Começar 🚀</a>
+		</section>
+
+		<section class="how-it-works">
+			<h2>Como Funciona</h2>
+				<div class="cards">
+					<Card
+					icon="ri-stack-line"
+					title="Crie a Fundação" 
+					description="Crie sua página de 101 Experimentos. É aqui que você documentará e exibirá todos os seus experimentos." 
+					/>
+		
+					<i class="ri-arrow-right-s-line"></i>
+		
+					<Card 
+					icon="ri-lightbulb-flash-line"
+					title="Gere uma Ideia" 
+					description="Use o gerador de ideias para obter desafios aleatórios e divertidos adaptados aos seus interesses." 
+					/>
+		
+					<i class="ri-arrow-right-s-line"></i>
+		
+					<Card 
+					icon="ri-share-box-line"
+					title="Crie e Compartilhe" 
+					description="Construa, projete ou programe seu experimento, depois compartilhe com a comunidade e documente em sua página!" 
+					/>
+				</div>
+		
+				<a class="btn-primary" href="/participate">Saiba Mais 📃</a>
+		</section>
+
+		<section class="get-started">
+			<div class="text">
+				<h2>Comece hoje mesmo!</h2>
+				<p>Use um desses templates iniciais para configurar rapidamente sua página pessoal do <strong>101 Experiments</strong>:</p>
+			</div>
+			
+			<div class="template-links">
+				<div class="template-card">
+					<img class="framework-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" />
+					<h3>Astro</h3>
+					<a class="disabled" href="#">Disponível em breve</a>
+				</div>
+		
+				<div class="template-card">
+					<img class="framework-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" />
+					<h3>Vue</h3>
+					<a class="disabled" href="#">Disponível em breve</a>
+				</div>
+		
+				<div class="template-card">
+					<img class="framework-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+					<h3>React</h3>
+					<a class="disabled" href="#">Disponível em breve</a>
+				</div>
+		
+				<div class="template-card">
+					<img class="framework-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+					<h3>Vanilla JS</h3>
+					<a class="disabled" href="#">Disponível em breve</a>
+				</div>
+		
+				<div class="template-card">
+					<img class="framework-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hugo/hugo-original.svg" />
+					<h3>HUGO</h3>
+					<a class="disabled" href="#">Disponível em breve</a>
+				</div>
+		
+			</div>
+		
+			<p class="secondary-text"><i>Todos os templates, por padrão, usam Vite para empacotamento e roteamento.</i></p>
+			<div class="buttons">
+				<a class="btn-primary" href="/learn/what-is-101exp">Guia de Introdução</a>
+				<a class="btn-secondary" href="/learn/frameworks-to-chose">Qual escolher?</a>
+			</div>
+		</section>
 	</main>
 </BaseLayout>
 
 <style>
+	.hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+
+        height: 90vh;
+        padding-top: 8vh;
+    }
+    .hero h1{
+        font-size: 5rem;
+        font-weight: 800;
+    }
+
+    .titles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texts{
+        opacity: .5;
+        display: flex;
+        gap: 32px;
+
+        font-size: 1.25rem;
+    }
+
+
+.about{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+justify-content: center;
+gap: 16px;
+height: 60vh;
+
+	p{
+		width: 50%;
+	}
+
+	.text{
+		opacity: .5;
+		font-size: 1.2rem;
+	}
+
+	.quote{
+		font-family: Merriweather, sans-serif;
+		font-size: 1.25rem;
+		font-style: italic;
+		font-weight: 600;
+
+		color: #555;
+	}
+}
+
+
+
+.how-it-works{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 32px;
+
+height: 80vh;
+
+.cards{
+display: flex;
+gap: 32px;
+justify-content: center;
+align-items: center;
+}
+i{
+	font-size: 2.5rem;
+	font-weight: 800;
+}
+}
+
+
+
+.get-started{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 16px;
+
+height: 90vh;
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .template-links{
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+    }
+    .template-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        border-radius: 8px;
+
+        h3{
+            margin-top: 8px;
+        }
+
+        transition: background-color 0.2s;
+    }
+    .template-card:hover{
+        background-color: #dbdbdb;
+    }
+
+    .framework-icon{
+        width: 64px;
+        height: 64px;
+    }
+
+    .buttons{
+        display: flex;
+        gap: 16px;
+    }
+
+}
 
 </style>

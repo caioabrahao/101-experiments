@@ -9,10 +9,10 @@ const posts = await Astro.glob('./learn/*.md');
     <section class="section">
         <h1>Bem-vindo ao Blog!</h1>
 
-        <ul>
+        <ul class="post-list">
             {posts.map(post => (
                 <li>
-                    <a href={post.url}>{post.frontmatter.title}</a>
+                    <a class="post-link" href={post.url}>{post.frontmatter.title}</a>
                 </li>
             ))}
         </ul>
@@ -24,5 +24,35 @@ const posts = await Astro.glob('./learn/*.md');
     .section{
         min-height: 90vh;
         padding: 10% 0;
+        display: flex;
+        flex-direction: column;
+
+        gap: 32px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .post-list{
+        list-style: none;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .post-link{
+        font-size: 1.5rem;
+        text-decoration: none;
+        
+        background-color: #f1f1f1;
+        color: inherit;
+        padding: 16px 32px;
+        display: inline-block;
+        border-radius: 16px;
     }
 </style>
