@@ -1,9 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import Card from '../components/Card.astro';
 
 ---
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        function scrollToAbout() {
+			const aboutSection = document.getElementById('about');
+			if (aboutSection) {
+				aboutSection.scrollIntoView({ behavior: 'smooth' });
+			}
+        }
+
+        const scrollButton = document.querySelector('.btn-primary');
+        if (scrollButton) {
+            scrollButton.addEventListener('click', scrollToAbout);
+        }
+    });
+</script>
 
 <BaseLayout>
 	<main>
@@ -18,13 +33,13 @@ import Card from '../components/Card.astro';
 			</div>
 			
 			<div class="ctaButtons">
-				<a class="btn-primary" href="/learn/what-is-101exp">Me contah mais.. 💅</a>
+				<button class="btn-primary" onclick="scrollToAbout()">Me contah mais.. 💅</button>
 				<a href="https://discord.gg/C9z6A9Dt9B" class="btn-minimal">💻 Entre no Discord</a>
 			</div>
 			
 		</section>
 
-		<section class="about">
+		<section class="about" id="about">
 			<h2>O que é o 101 EXP?</h2>
 			<p class="text">101 Experiments é um desafio para criar e apresentar 101 projetos únicos em áreas pelas quais você é apaixonado. O objetivo é aprender, se divertir e expandir seus limites.</p>
 			
@@ -148,7 +163,7 @@ align-items: center;
 text-align: center;
 justify-content: center;
 gap: 16px;
-height: 60vh;
+min-height: 60vh;
 
 	p{
 		width: 50%;
@@ -177,8 +192,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 32px;
-
-height: 80vh;
+min-height: 80vh;
 
 .cards{
 display: flex;
@@ -200,8 +214,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 16px;
-
-height: 90vh;
+min-height: 90vh;
 
     .text{
         display: flex;
@@ -243,7 +256,49 @@ height: 90vh;
         display: flex;
         gap: 16px;
     }
+}
 
+@media (max-width: 768px) {
+	
+	.hero{
+		text-align: center;
+	}
+	.hero h1 {
+		font-size: 3rem;
+		text-align: center;
+	}
+	.ri-arrow-right-s-line{
+		display: none;
+	}
+
+	.texts {
+		flex-direction: column;
+		gap: 16px;
+		font-size: 1rem;
+	}
+
+	.about{
+		margin-bottom: 32px;
+	}
+	.about p {
+		width: 80%;
+	}
+
+	.how-it-works{
+		text-align: center;
+	}
+	.how-it-works .cards {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.get-started{
+		text-align: center;
+	}
+	.get-started .template-links {
+		flex-direction: column;
+		gap: 32px;
+	}
 }
 
 </style>

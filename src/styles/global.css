@@ -53,7 +53,7 @@ h2{
 .btn-minimal{
     display: inline-block;
     padding: 16px 24px;
-    border-radius: 8px;
+    border-radius: 16px;
     background-color: transparent;
     color: #333;
     font-weight: 600;
@@ -181,5 +181,12 @@ h2{
 .markdownContent th {
     background-color: #f6f8fa;
     font-weight: 600;
+}
+
+
+@media (max-width: 768px){
+    main{
+        padding: 0 16px;
+    }
 }
 

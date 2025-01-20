@@ -55,4 +55,10 @@ const posts = await Astro.glob('./learn/*.md');
         display: inline-block;
         border-radius: 16px;
     }
+
+    @media (max-width: 768px) {
+        .section{
+            padding: 10vh 0;
+        }
+    }
 </style>

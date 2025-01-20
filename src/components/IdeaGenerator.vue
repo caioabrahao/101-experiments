@@ -186,4 +186,22 @@ input[type="radio"]:checked + .radio-label {
     gap: 16px;
 }
 
+@media (max-width: 768px) {
+    .section{
+        padding: 10vh 0;
+    }
+    .optionsWrapper{
+        flex-direction: column;
+    }
+    .option-set{
+        width: 100%;
+    }
+    .radio-label {
+        width: 100%;
+    }
+    .responseText{
+        width: 90%;
+    }
+}
+
 </style>
